@@ -1,27 +1,27 @@
 # OpenTyrian DS
 
-Puerto de Tyrian (shooter vertical) para Nintendo DS.
+Tyrian (vertical shooter) port for Nintendo DS.
 
-**Versión:** 0.3  
-**Autor:** Dopefish (VespeneGas)  
-**Licencia:** GPL v2
-
----
-
-## Estado
-
-✅ **COMPILADO Y TESTEADO** - Funciona en Nintendo DS real
+**Version:** 0.3  
+**Author:** Dopefish (VespeneGas)  
+**License:** GPL v2
 
 ---
 
-## Compilación
+## Status
 
-El proyecto incluye **todas las librerías necesarias** - no necesitas descargar nada extra.
+✅ **COMPILED AND TESTED** - Works on real Nintendo DS hardware
+
+---
+
+## Build
+
+This project includes **all required libraries** - no extra downloads needed.
 
 ### Windows
 
-1. Abre CMD en la carpeta del proyecto
-2. Ejecuta:
+1. Open CMD in the project folder
+2. Run:
    ```cmd
    compilar.bat
    ```
@@ -35,62 +35,62 @@ export PATH=$DEVKITARM/bin:$PATH
 make
 ```
 
-### Salida
+### Output
 
-- `tyrianDS.nds` - ROM de Nintendo DS (531 KB)
-
----
-
-## Instalación en Nintendo DS
-
-1. **DLDI Patch** - Parchea `tyrianDS.nds` para tu tarjeta de homebrew
-2. Copia `tyrianDS.nds` a tu tarjeta SD
-3. **Datos del juego** - Copia la carpeta `tyrian/` con los archivos de datos a la raíz de la SD
-
-### Datos del Juego
-
-El código fuente **NO incluye** los datos de Tyrian. Necesitas:
-- Tyrian 2.1 (dominio público)
-- O OpenTyrian PC: https://github.com/opentyrian/opentyrian
-
-Copia los archivos de datos a `tyrian/`.
+- `tyrianDS.nds` - Nintendo DS ROM (531 KB)
 
 ---
 
-## Controles
+## Installation on Nintendo DS
 
-| Botón | Acción |
-|-------|--------|
-| D-Pad | Mover nave / Navegar |
-| A | Confirmar |
-| B | Arma trasera / Volver |
-| Y | Disparar |
+1. **DLDI Patch** - Patch `tyrianDS.nds` for your homebrew card
+2. Copy `tyrianDS.nds` to your SD card
+3. **Game Data** - Copy the `tyrian/` folder with data files to the SD root
+
+### Game Data
+
+The source code **does NOT include** Tyrian game data. You need:
+- Tyrian 2.1 (public domain)
+- Or OpenTyrian PC: https://github.com/opentyrian/opentyrian
+
+Copy the data files to `tyrian/`.
+
+---
+
+## Controls
+
+| Button | Action |
+|--------|--------|
+| D-Pad | Move ship / Navigate |
+| A | Confirm |
+| B | Rear weapon / Back |
+| Y | Fire |
 | L/R | Sidekicks |
-| Select | Menú en juego |
-| Touch | Mover cursor/nave |
+| Select | In-game menu |
+| Touch | Move cursor/ship |
 
 ---
 
-## Entorno de Desarrollo Incluido
+## Included Development Environment
 
-| Componente | Versión |
-|------------|---------|
+| Component | Version |
+|-----------|---------|
 | devkitARM | r23b (2008) |
 | libnds | 20071023 |
 | dswifi | 0.3.3 |
 | libfat | 20070127 |
-| SDL | GPF port para NDS |
+| SDL | GPF port for NDS |
 
 ---
 
-## Fix Aplicado
+## Fix Applied
 
-- `arm9/source/vga256d.c` - Añadido `SDL_NDS_ALLOW_HWSURFACE` (constante faltante del port de SDL original)
+- `arm9/source/vga256d.c` - Added `SDL_NDS_ALLOW_HWSURFACE` (missing constant from original SDL port)
 
 ---
 
-## Recursos
+## Resources
 
-- Página original: https://vespenegas.com/tyrian.html
+- Original page: https://vespenegas.com/tyrian.html
 - GameBrew: https://www.gamebrew.org/wiki/OpenTyrian_DS
 - OpenTyrian PC: https://github.com/opentyrian/opentyrian
